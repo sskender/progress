@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loading</title>
+    <title>Progress Tracker</title>
     <style>
         html, body {
             font-family: "Comic Sans MS", cursive, sans-serif;
@@ -26,12 +26,13 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            margin: -2.5% auto auto auto;
         }
 
         .progress-wrapper {
             position: relative;
             width: 80%;
-            margin: 50px auto 25px auto ;
+            margin: 5% auto 2% auto;
         }
 
         .progress-container {
@@ -52,7 +53,7 @@
         .progress-image {
             position: absolute;
             top: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-20%, -55%);
             height: 100px;
             z-index: 1;
             pointer-events: none;
@@ -67,18 +68,33 @@
         @media (max-width: 1280px) {
             .progress-wrapper {
                 width: 90%;
+                margin: 7.5% auto 2.5% auto;
+            }
+
+            .progress-image {
+                transform: translate(-15%, -55%);
             }
         }
 
         @media (max-width: 768px) {
             .progress-wrapper {
                 width: 92%;
+                margin: 7.5% auto 2.5% auto;
+            }
+
+            .progress-image {
+                transform: translate(-15%, -55%);
             }
         }
 
         @media (max-width: 480px) {
             .progress-wrapper {
                 width: 95%;
+                margin: 7.5% auto 2.5% auto;
+            }
+
+            .progress-image {
+                transform: translate(-15%, -55%);
             }
         }
 
@@ -86,8 +102,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <h1>Loading...</h1>
-
+        <h1>Shhh ... making calls ... closing deals ...</h1>
         <div class="progress-wrapper">
             <div class="progress-container">
                 <div class="progress-bar" id="progressBar"></div>
@@ -104,7 +119,7 @@
             return `hsl(${hue}, 100%, 50%)`
         }
 
-        const progressPercentage = 60; // UPDATE ME
+        const progressPercentage = 0.83; // UPDATE ME
 
         const progressBar = document.getElementById("progressBar");
         const progressImage = document.getElementById("progressImage");
