@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Comic Neue" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Comic Neue" rel="stylesheet" />
     <title>Progress Tracker</title>
     <style>
         html, body {
@@ -98,9 +99,9 @@
                 transform: translate(-15%, -55%);
             }
         }
-
     </style>
 </head>
+
 <body>
     <div class="wrapper">
         <h1>Shhh ... making calls ... closing deals ...</h1>
@@ -108,7 +109,7 @@
             <div class="progress-container">
                 <div class="progress-bar" id="progressBar"></div>
             </div>
-            <img class="progress-image" id="progressImage" src="image.png">
+            <img class="progress-image" id="progressImage" src="image.png" />
         </div>
 
         <p class="progress-text">Progress: <span id="progressText">0</span>%</p>
@@ -117,21 +118,22 @@
     <script>
         function calculateColor(percentage) {
             const hue = (percentage / 100) * 120;
-            return `hsl(${hue}, 100%, 50%)`
+            return `hsl(${hue}, 100%, 50%)`;
         }
 
-        const progressPercentage = 0.78; // UPDATE ME
+        const progressPercentage = ((9665 / 600000) * 100).toFixed(2); // UPDATE ME
 
         const progressBar = document.getElementById("progressBar");
         const progressImage = document.getElementById("progressImage");
         const progressText = document.getElementById("progressText");
 
-        progressBar.style.width = `${progressPercentage}%`
+        progressBar.style.width = `${progressPercentage}%`;
         progressBar.style.backgroundColor = calculateColor(progressPercentage);
 
-        progressImage.style.left = `${progressPercentage}%`
+        progressImage.style.left = `${progressPercentage}%`;
 
         progressText.textContent = progressPercentage;
     </script>
 </body>
+
 </html>
